@@ -3,8 +3,8 @@
   "description": "",
   "autoload": {
     "psr-4": {
-      "advent-of-code\\": "src/",
-      "advent-of-code\\Tests\\": "tests/"
+      "Advent\\": "src/",
+      "Advents\\Tests\\": "tests/"
     }
   },
   "require": {

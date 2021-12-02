@@ -5,7 +5,6 @@ namespace Advent\Tests;
 use Advent\DayOne;
 use PHPUnit\Framework\TestCase;
 
-
 class DayOneTest extends TestCase
 {
     public function testReturnsFirstValue(): void
