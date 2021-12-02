@@ -4,14 +4,28 @@ namespace Advent;
 
 class DayOne
 {
-    function getInputTotal($puzzleInput): array
+    function getInputTotal($puzzleInput): int
     {
-        $currentNumber = [];
-        if($currentNumber > $puzzleInput) {
-            $value = $currentNumber;
-        }else{
-            $value = $puzzleInput;
+        $value = 0;
+        if($puzzleInput === 1) {
+            $value = 0;
         }
-        return $value;
+       return $value;
     }
 }
+
+
+//$value = 0;
+//if($puzzleInput === 1) {
+//    $value = 0;
+//}
+//return $value;
+
+
+//$currentNumber = [];
+//if($currentNumber > $puzzleInput) {
+//    $value = $currentNumber;
+//}else{
+//    $value = $puzzleInput;
+//}
+//return $value;
