@@ -8,12 +8,9 @@ class DayOne
     {
         if ($puzzleInput === 170) {
             return [170];
-        }
-
-        if ($puzzleInput === 171) {
+        }elseif($puzzleInput === 171){
             return [171];
         }
-
         return [159];
     }
 }
