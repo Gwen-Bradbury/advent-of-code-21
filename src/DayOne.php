@@ -13,19 +13,3 @@ class DayOne
        return $value;
     }
 }
-
-
-//$value = 0;
-//if($puzzleInput === 1) {
-//    $value = 0;
-//}
-//return $value;
-
-
-//$currentNumber = [];
-//if($currentNumber > $puzzleInput) {
-//    $value = $currentNumber;
-//}else{
-//    $value = $puzzleInput;
-//}
-//return $value;

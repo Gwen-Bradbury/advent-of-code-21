@@ -13,8 +13,8 @@ class DayOneTest extends TestCase
         $this->assertSame(0, (new DayOne())->getInputTotal("1"));
     }
 
-//    public function  testGivenTwoNumbersWhereTheSecondIsBiggerReturnsOne(): void
-//    {
-//        $this->assertSame(1, (new DayOne())->getInputTotal("1\n2"));
-//    }
+    public function  testGivenTwoNumbersWhereTheSecondIsBiggerReturnsOne(): void
+    {
+        $this->assertSame(1, (new DayOne())->getInputTotal("1\n2"));
+    }
 }
