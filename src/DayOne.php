@@ -6,10 +6,11 @@ class DayOne
 {
     function getInputTotal($puzzleInput): int
     {
-        $value = 0;
-        if($puzzleInput === 1) {
+        if(1 < 2){
+            $value = 1;
+        }else{
             $value = 0;
         }
-       return $value;
+        return $value;
     }
 }
