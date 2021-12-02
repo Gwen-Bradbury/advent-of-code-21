@@ -8,18 +8,13 @@ use PHPUnit\Framework\TestCase;
 
 class DayOneTests extends TestCase
 {
-    public function testReturnsFirstValue(): void
+    public function  givenOneNumberReturnsZero(): void
     {
-        $this->assertSame([159], (new DayOne())->getInputTotal(159));
+        $this->assertSame(0, (new DayOne())->getInputTotal("1"));
     }
 
-    public function testReturnsSecondValue(): void
+    public function  givenTwoNumbersWhereTheSecondIsBiggerReturnsOne(): void
     {
-        $this->assertSame([170], (new DayOne())->getInputTotal(170));
-    }
-
-    public function testReturnsThirdValue(): void
-    {
-        $this->assertSame([171], (new DayOne())->getInputTotal(171));
+        $this->assertSame(1, (new DayOne())->getInputTotal("1\n2"));
     }
 }

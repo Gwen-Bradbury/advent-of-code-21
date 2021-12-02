@@ -6,11 +6,12 @@ class DayOne
 {
     function getInputTotal($puzzleInput): array
     {
-        if ($puzzleInput === 170) {
-            return [170];
-        }elseif($puzzleInput === 171){
-            return [171];
+        $currentNumber = [];
+        if($currentNumber > $puzzleInput) {
+            $value = $currentNumber;
+        }else{
+            $value = $puzzleInput;
         }
-        return [159];
+        return $value;
     }
 }
