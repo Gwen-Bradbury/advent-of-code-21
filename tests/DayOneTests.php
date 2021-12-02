@@ -12,4 +12,8 @@ class DayOneTest extends TestCase
         $this->assertSame([159], (new DayOne())->getInputTotal(159));
     }
 
+    public function testReturnsSecondValue(): void
+    {
+        $this->assertSame([170], (new DayOne())->getInputTotal(170));
+    }
 }
