@@ -14,11 +14,11 @@ class SonarPartTwoTest extends TestCase
 
     public function  testGivenSecondWindowReturnsNine(): void
     {
-        $this->assertSame(9, (new SonarPartTwo())->SweepPartTwo("1\n2\n3\n4"));
+        $this->assertSame(9, (new SonarPartTwo())->SweepPartTwo("2\n3\n4"));
     }
 
     public function  testGivenThirdWindowReturns(): void
     {
-        $this->assertSame(12, (new SonarPartTwo())->SweepPartTwo("1\n2\n3\n4\n5"));
+        $this->assertSame(12, (new SonarPartTwo())->SweepPartTwo("3\n4\n5"));
     }
 }
