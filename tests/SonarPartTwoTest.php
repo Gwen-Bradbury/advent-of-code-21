@@ -9,6 +9,6 @@ class SonarPartTwoTest extends TestCase
 {
     public function  testGivenOneNumberReturnsZero(): void
     {
-        $this->assertSame(0, (new SonarPartTwo())->SweepPartTwo("1"));
+        $this->assertSame(6, (new SonarPartTwo())->SweepPartTwo("1\n2\n3"));
     }
 }
