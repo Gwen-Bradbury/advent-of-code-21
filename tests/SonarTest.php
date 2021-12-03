@@ -2,45 +2,45 @@
 
 namespace Advent\Tests;
 
-use Advent\DayOne;
+use Advent\Sonar;
 use PHPUnit\Framework\TestCase;
 
 
-class DayOneTest extends TestCase
+class SonarTest extends TestCase
 {
     public function  testGivenOneNumberReturnsZero(): void
     {
-        $this->assertSame(0, (new DayOne())->getInputTotal("1"));
+        $this->assertSame(0, (new Sonar())->Sweep("1"));
     }
 
     public function  testGivenTwoNumbersWhereTheSecondIsBiggerReturnsOne(): void
     {
-        $this->assertSame(1, (new DayOne())->getInputTotal("1\n2"));
+        $this->assertSame(1, (new Sonar())->Sweep("1\n2"));
     }
 
     public function  testGivenThreeNumbersWhereTheSecondIsBiggerReturnsOne(): void
     {
-        $this->assertSame(2, (new DayOne())->getInputTotal("1\n2\n3"));
+        $this->assertSame(2, (new Sonar())->Sweep("1\n2\n3"));
     }
 
     public function  testGivenFourNumbersWhereTheSecondIsBiggerReturnsOne(): void
     {
-        $this->assertSame(3, (new DayOne())->getInputTotal("1\n2\n3\n4"));
+        $this->assertSame(3, (new Sonar())->Sweep("1\n2\n3\n4"));
     }
 
     public function  testGivenFiveNumbersWhereTheSecondIsBiggerReturnsOne(): void
     {
-        $this->assertSame(3, (new DayOne())->getInputTotal("1\n2\n3\n4\n2"));
+        $this->assertSame(3, (new Sonar())->Sweep("1\n2\n3\n4\n2"));
     }
 
     public function  testExampleInputReturnsSeven(): void
     {
-        $this->assertSame(7, (new DayOne())->getInputTotal("199\n200\n208\n210\n200\n207\n240\n269\n260\n263"));
+        $this->assertSame(7, (new Sonar())->Sweep("199\n200\n208\n210\n200\n207\n240\n269\n260\n263"));
     }
 
     public function  testPuzzleInputReturnsCorrectAnswer(): void
     {
-        $this->assertSame(1451, (new DayOne())->getInputTotal("159
+        $this->assertSame(1451, (new Sonar())->Sweep("159
 170
 171
 170

@@ -2,9 +2,9 @@
 
 namespace Advent;
 
-class DayOne
+class Sonar
 {
-    function getInputTotal($puzzleInput): int
+    function Sweep(string $puzzleInput): int
     {
         $puzzleInput = explode("\n", $puzzleInput);
         $counter = 0;
