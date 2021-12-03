@@ -6,12 +6,15 @@ class DayOne
 {
     function getInputTotal($puzzleInput): int
     {
-        $value =[];
-        if ($puzzleInput === "1\n2"){
-            $value = 1;
-        }elseif($puzzleInput === "1"){
-            $value = 0;
+        $puzzleInput = explode("\n", $puzzleInput);
+        $counter = 0;
+        $previousMeasurement = $puzzleInput[0];
+        forEach($puzzleInput as $measurement) {
+            if($measurement > $previousMeasurement) {
+                $counter++;
+            }
+            $previousMeasurement = $measurement;
         }
-    return $value;
+        return $counter;
     }
 }
