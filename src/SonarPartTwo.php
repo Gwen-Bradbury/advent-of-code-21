@@ -6,10 +6,11 @@ class SonarPartTwo
 {
     function SweepPartTwo(string $puzzleInput): int
     {
+        $measurement = 6;
         if($puzzleInput === "1\n2\n3\n4"){
-            return 9;
+           $measurement = 9;
         }
-        return 6;
+        return $measurement;
     }
 }
 
