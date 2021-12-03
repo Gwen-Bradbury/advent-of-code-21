@@ -4,12 +4,12 @@ namespace Advent;
 
 class SonarPartTwo
 {
-    function SweepPartTwo(string $puzzleInput): int
+    function SweepPartTwo(string $subData): int
     {
-        $puzzleInput = explode("\n", $puzzleInput);
-        $previousMeasurement = (int)$puzzleInput[0] + (int)$puzzleInput[1] + (int)$puzzleInput[2];
+        $subData = explode("\n", $subData);
+        $previousMeasurement = (int)$subData[0] + (int)$subData[1] + (int)$subData[2];
         $counter = 0;
-        forEach ($puzzleInput as $measurement) {
+        forEach ($subData as $measurement) {
             if ($measurement > $previousMeasurement) {
                 $counter++;
             }
