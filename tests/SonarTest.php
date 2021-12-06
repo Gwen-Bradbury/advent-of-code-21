@@ -8,39 +8,34 @@ use PHPUnit\Framework\TestCase;
 
 class SonarTest extends TestCase
 {
-    public function  testGivenOneNumberReturnsZero(): void
+    public function  testItReturnsZeroIfNoIncrease(): void
     {
-        $this->assertSame(0, (new Sonar())->Sweep("1"));
+        $this->assertSame(0, (new Sonar())->sweep("1\n2\n3"));
     }
 
-    public function  testGivenTwoNumbersWhereTheSecondIsBiggerReturnsOne(): void
+    public function  testItReturnsOne(): void
     {
-        $this->assertSame(1, (new Sonar())->Sweep("1\n2"));
+        $this->assertSame(1, (new Sonar())->sweep("1\n2\n3\n4"));
     }
 
-    public function  testGivenThreeNumbersWhereTheSecondIsBiggerReturnsOne(): void
+    public function  testItReturnsTwo(): void
     {
-        $this->assertSame(2, (new Sonar())->Sweep("1\n2\n3"));
+        $this->assertSame(2, (new Sonar())->sweep("1\n2\n3\n4\n5"));
     }
 
-    public function  testGivenFourNumbersWhereTheSecondIsBiggerReturnsOne(): void
+    public function  testItReturnsThree(): void
     {
-        $this->assertSame(3, (new Sonar())->Sweep("1\n2\n3\n4"));
+        $this->assertSame(3, (new Sonar())->sweep("1\n2\n3\n4\n5\n6"));
     }
 
-    public function  testGivenFiveNumbersWhereTheSecondIsBiggerReturnsOne(): void
+    public function testItReturnsZeroWhenNumbersNotGreaterThan(): void
     {
-        $this->assertSame(3, (new Sonar())->Sweep("1\n2\n3\n4\n2"));
+        $this->assertSame(0, (new Sonar())->sweep("4\n3\n2\n1"));
     }
 
-    public function  testExampleInputReturnsSeven(): void
+    public function testCodeWillReturnStar(): void
     {
-        $this->assertSame(7, (new Sonar())->Sweep("199\n200\n208\n210\n200\n207\n240\n269\n260\n263"));
-    }
-
-    public function  testPuzzleInputReturnsCorrectAnswer(): void
-    {
-        $this->assertSame(1451, (new Sonar())->Sweep("159
+        $this->assertSame(1395, (new Sonar())->sweep("159
 170
 171
 170
