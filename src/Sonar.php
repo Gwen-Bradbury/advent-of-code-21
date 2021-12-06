@@ -4,17 +4,19 @@ namespace Advent;
 
 class Sonar
 {
-    function Sweep(string $puzzleInput): int
+    function sweep(string $readings): int
     {
-        $puzzleInput = explode("\n", $puzzleInput);
+        $readings = explode("\n", $readings);
         $counter = 0;
-        $previousMeasurement = $puzzleInput[0];
-        forEach($puzzleInput as $measurement) {
-            if($measurement > $previousMeasurement) {
+
+        if (array_key_exists(3, $readings)) {
+            $sumOfFirstThree = $readings[0] + $readings[1] + $readings[2];
+            $sumOfSecondThree = $readings[1] + $readings[2] + $readings[3];
+            if ($sumOfSecondThree > $sumOfFirstThree) {
                 $counter++;
             }
-            $previousMeasurement = $measurement;
         }
+
         return $counter;
     }
 }
