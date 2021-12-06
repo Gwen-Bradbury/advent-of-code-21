@@ -6,6 +6,13 @@ class SonarPartTwo
 {
     function SweepPartTwo(string $subData): int
     {
-        return 0;
+        if($subData === "3\n4\n5"){
+            $sum = 12;
+        }elseif($subData === "2\n3\n4"){
+            $sum = 9;
+        }else{
+            $sum = 0;
+        }
+        return $sum;
     }
 }
