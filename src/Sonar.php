@@ -9,14 +9,14 @@ class Sonar
         $readings = explode("\n", $readings);
         $counter = 0;
 
-        if (array_key_exists(3, $readings)) {
-            $sumOfFirstThree = $readings[0] + $readings[1] + $readings[2];
-            $sumOfSecondThree = $readings[1] + $readings[2] + $readings[3];
-            if ($sumOfSecondThree > $sumOfFirstThree) {
+        $previousSweepValue = 0;
+        for ($i = 1; array_key_exists($i + 1, $readings); $i++) {
+            $currentSweep = $readings[$i - 1] + $readings[$i] + $readings[$i + 1];
+            if ($i > 1 && $previousSweepValue < $currentSweep) {
                 $counter++;
             }
+            $previousSweepValue = $currentSweep;
         }
-
         return $counter;
     }
 }
